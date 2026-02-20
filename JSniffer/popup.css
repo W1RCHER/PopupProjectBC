@@ -1,0 +1,93 @@
+body {
+  width: 320px;
+  font-family: Arial, sans-serif;
+  padding: 10px;
+}
+
+#tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 6px;
+  border: none;
+  background: #ddd;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.tab-button.active {
+  background: #7baaf7;
+  color: #fff;
+}
+
+.tab {
+  display: none;
+}
+
+.tab.active {
+  display: block;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+
+label:hover {
+  background-color: #f9f9ff;
+  border-radius: 4px;
+}
+
+.entry-card {
+  background: #f7f9ff;
+  border-radius: 8px;
+  padding: 6px;
+  margin-bottom: 8px;
+  border: 1px solid #ddd;
+}
+
+.entry-header {
+  font-weight: bold;
+  cursor: pointer;
+  color: #0057b8;
+}
+
+.entry-header:hover {
+  text-decoration: underline;
+}
+
+.script-list {
+  display: none;
+  margin-top: 6px;
+}
+
+.script-entry {
+  font-size: 12px;
+  margin-bottom: 6px;
+  white-space: pre-wrap;
+}
+
+pre {
+  background: #e8f4ff;
+  padding: 8px;
+  border-radius: 6px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.filter-bar {
+  margin-bottom: 6px;
+}
+
+.filter-bar select {
+  width: 100%;
+  padding: 4px;
+  border-radius: 4px;
+}

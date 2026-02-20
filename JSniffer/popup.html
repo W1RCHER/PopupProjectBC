@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>CHAMPOL</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div id="tabs">
+    <button class="tab-button active" data-tab="main">Главная</button>
+    <button class="tab-button" data-tab="results">Результаты</button>
+    <button class="tab-button" data-tab="settings">Настройки</button>
+  </div>
+
+  <div id="main" class="tab active">
+    <h2>JSniffer</h2>
+    <button id="analyze">🔍 Анализировать страницу</button>
+    <p id="status" style="margin-top:10px; font-style:italic; color:gray"></p>
+  </div>
+
+  <div id="results" class="tab">
+    <h2>История анализов</h2>
+    <div class="filter-bar">
+      <label>Фильтр по уровню риска:
+        <select id="levelFilter">
+          <option value="all">Все</option>
+          <option value="green">Безопасный</option>
+          <option value="orange">Подозрительный</option>
+          <option value="red">Опасный</option>
+        </select>
+      </label>
+    </div>
+    <div id="resultList"></div>
+    <button id="clearResults">🗑 Очистить</button>
+  </div>
+
+  <div id="settings" class="tab">
+    <h2>Настройки</h2>
+    <label title="Проверяет встроенные скрипты (внутри тегов &lt;script&gt; без src)">
+      <input type="checkbox" id="checkInline"> Проверять встроенные скрипты
+    </label><br>
+    <label title="Проверяет внешние JS-файлы, подключённые через src='...'">
+      <input type="checkbox" id="checkExternal"> Проверять внешние скрипты
+    </label><br>
+    <label title="Включает анализ на наличие опасных конструкций (eval, document.write и др.)">
+      <input type="checkbox" id="checkDanger"> Искать опасные конструкции
+    </label><br>
+    <button id="saveSettings">💾 Сохранить</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
